@@ -8,7 +8,8 @@ namespace ProductsApp.Domain.Entities
         public Guid Id { get; private set; }
         public string Name { get; private set; }
         public decimal Price { get; private set; }
-        public string? Description { get; set; }
+        public string? Description { get; private set; }
+        public bool IsDeleted { get; private set; }
 
         public Product(Guid id, string name, decimal price, string description)
         {
@@ -16,6 +17,7 @@ namespace ProductsApp.Domain.Entities
             Name = name;
             SetPrice(price);
             Description = description;
+            IsDeleted = false;
         }
 
         public void Update(string name, decimal price, string description)
@@ -33,6 +35,11 @@ namespace ProductsApp.Domain.Entities
             }
 
             Price = price;
+        }
+
+        public void Delete()
+        {
+            IsDeleted = true;
         }
     }
 }
