@@ -5,6 +5,10 @@ using ProductsApp.Application.Products.DTOs;
 using ProductsApp.Application.Products.Services;
 using ProductsApp.Domain.Entities;
 using ProductsApp.Domain.Repositories;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 
 namespace ProductsApp.Application.Products
 {
@@ -49,9 +53,12 @@ namespace ProductsApp.Application.Products
         public async Task<ProductDto> GetProduct(Guid id)
         {
             var product = await _productRepository.GetByIdAsync(id);
-            return product == null
-                ? throw new NotFoundException("Product not found.")
-                : new ProductDto
+            if (product == null)
+            {
+                throw new NotFoundException("Product not found.");
+            }
+
+            return new ProductDto
             {
                 Id = product.Id,
                 Name = product.Name,
@@ -59,6 +66,7 @@ namespace ProductsApp.Application.Products
                 Description = product.Description
             };
         }
+
 
         public async Task<List<ProductDto>> GetProducts()
         {

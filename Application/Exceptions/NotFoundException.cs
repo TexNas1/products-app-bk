@@ -1,4 +1,6 @@
-﻿namespace ProductsApp.Application.Exceptions
+﻿using System;
+
+namespace ProductsApp.Application.Exceptions
 {
     public class NotFoundException : Exception
     {

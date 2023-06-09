@@ -1,5 +1,8 @@
 ﻿using ProductsApp.Application.Commands;
 using ProductsApp.Application.Products.DTOs;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ProductsApp.Application.Products.Services
 {
