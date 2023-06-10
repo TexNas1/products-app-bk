@@ -2,7 +2,6 @@
 using Microsoft.Extensions.Configuration;
 using ProductsApp.Domain.Entities;
 
-
 namespace ProductsApp.Infrastructure.Data
 {
     public class ProductDbContext : DbContext
@@ -13,6 +12,7 @@ namespace ProductsApp.Infrastructure.Data
         {
             // This constructor is required for EF Core design-time operations.
         }
+
         public ProductDbContext(DbContextOptions<ProductDbContext> options, IConfiguration configuration)
             : base(options)
         {
@@ -35,7 +35,8 @@ namespace ProductsApp.Infrastructure.Data
                 entity.HasKey(p => p.Id);
 
                 entity.Property(p => p.Id)
-                    .HasConversion<string>();
+                    .HasColumnType("uuid")
+                    .HasDefaultValueSql("uuid_generate_v4()");
 
                 entity.Property(p => p.Name)
                     .HasMaxLength(255)

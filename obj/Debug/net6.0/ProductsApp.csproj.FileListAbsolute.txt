@@ -53,3 +53,5 @@ D:\hahn-webApi-task\ProductsApp\obj\Debug\net6.0\refint\ProductsApp.dll
 D:\hahn-webApi-task\ProductsApp\obj\Debug\net6.0\ProductsApp.pdb
 D:\hahn-webApi-task\ProductsApp\obj\Debug\net6.0\ProductsApp.genruntimeconfig.cache
 D:\hahn-webApi-task\ProductsApp\obj\Debug\net6.0\ref\ProductsApp.dll
+D:\hahn-webApi-task\ProductsApp\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+D:\hahn-webApi-task\ProductsApp\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

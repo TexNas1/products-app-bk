@@ -15,7 +15,8 @@ namespace ProductsApp.Application.Commands
         {
             RuleFor(x => x.Name).NotEmpty().MaximumLength(255);
             RuleFor(x => x.Price).GreaterThan(0);
-            RuleFor(x => x.Description).Empty().When(x => x.Description == null);
+            // making description as optional
+            RuleFor(x => x.Description).MaximumLength(500);
 
         }
     }

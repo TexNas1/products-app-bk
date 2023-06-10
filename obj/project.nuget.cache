@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "zDNvN94ljimgkie90GdmgPSxawJRAjok2pVXwJvPoK+S02pnYZKcLqTirEpJ5ioPJSUW/uEuakAMojxfR577RQ==",
+  "dgSpecHash": "yjWg/J16Jmh2MSfZuP3LLF5CL2N2APlrWLnyR6Lz+imtykbdwyTd+Zs24zu51YnytLcekpzUCdaV8kh2Fpax9g==",
   "success": true,
   "projectFilePath": "D:\\hahn-webApi-task\\ProductsApp\\ProductsApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zee\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512",
+    "C:\\Users\\zee\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\zee\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\zee\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\zee\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.5\\microsoft.entityframeworkcore.7.0.5.nupkg.sha512",
     "C:\\Users\\zee\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.5\\microsoft.entityframeworkcore.abstractions.7.0.5.nupkg.sha512",
