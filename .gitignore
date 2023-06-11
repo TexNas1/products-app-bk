@@ -1,0 +1,31 @@
+# .NET build artifacts
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+*.sln.ide
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.log
+
+# Resharper files
+_ReSharper*/
+
+# NuGet
+packages/
+
+# MSBuild auto-generated files
+*.nuget.props
+*.nuget.targets
+
+# Test Results
+TestResults/
+
+# Swagger UI generated files
+swagger.json
+swagger.yaml
+swagger.xml
+/swagger-ui/
