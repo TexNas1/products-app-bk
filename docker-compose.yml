@@ -1,0 +1,24 @@
+version: "3"
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: DockerFile
+    ports:
+      - 7185:80
+      - 5173:80  
+    depends_on:
+      - database
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings__ProductsDbConnection=Server=database;Port=5432;Database=products_db;User Id=produser;Password=produser
+
+  database:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=produser
+      - POSTGRES_PASSWORD=produser
+      - POSTGRES_DB=products_db
+    ports:
+      - 5432:5432
