@@ -11,11 +11,12 @@ using ProductsApp.Application.Products.Services;
 using ProductsApp.Application.Products;
 using ProductsApp.Domain.Repositories;
 using ProductsApp.Infrastructure.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Register the database context.
-builder.Services.AddDbContext<ProductDbContext>();
+builder.Services.AddDbContext<ProductDbContext>((options) => options.UseNpgsql("ProductsDbConnection"));
 builder.Services.AddControllers();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 // Register the ProductService

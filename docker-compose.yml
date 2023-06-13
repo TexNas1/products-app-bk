@@ -15,10 +15,17 @@ services:
       - ConnectionStrings__ProductsDbConnection=Server=database;Port=5432;Database=products_db;User Id=produser;Password=produser
 
   database:
-    image: postgres:13
+    image: postgres:latest
     environment:
       - POSTGRES_USER=produser
       - POSTGRES_PASSWORD=produser
       - POSTGRES_DB=products_db
     ports:
       - 5432:5432
+    restart: always
+    volumes:
+      - products_data:/var/lib/postgresql/data/
+    command: ["postgres", "-c", "shared_preload_libraries=uuid-ossp", "-c", "synchronous_commit=off"]
+
+volumes:
+  products_data: # Define the volume here
