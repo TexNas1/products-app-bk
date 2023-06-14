@@ -1,4 +1,4 @@
-# Products WebAPI
+# products-app-bk
 
 This repository contains the backend code for the products CRUD application. It is built with .NET 6 using the Domain-Driven Design (DDD) pattern and provides a RESTful API for the frontend to interact with.
 
@@ -61,12 +61,20 @@ To run the backend locally, follow these steps:
 
 8. The backend API should now be running and accessible at the specified URL.
 
-## Future Enhancements
+## Docker
 
-Here are some potential enhancements for the backend:
+To run the backend using Docker, you can use the following commands:
 
-- **Authentication and Authorization**: Implement user authentication and authorization to secure the API endpoints and restrict access to certain operations.
+1. Ensure that you have Docker installed on your machine.
+2. Open a terminal or command prompt and navigate to the root directory of the project.
+3. Build the Docker image for the backend by running the following command:
+```
+docker-compose build
+```
+4. Start the Docker containers using Docker Compose:
+```
+docker-compose up
+```
+5. This will start the backend API and the PostgreSQL database container.
 
-- **Caching**: Introduce caching mechanisms to improve performance and reduce database load for frequently accessed data.
-
-- **Logging and Error Handling**: Enhance logging and error handling mechanisms to provide better visibility into application behavior and simplify troubleshooting.
+The backend API should now be running and accessible at http://localhost:5173
